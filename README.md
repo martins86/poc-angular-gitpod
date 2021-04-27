@@ -30,7 +30,7 @@ ng new novo-projeto --routing=true --strict=true --style=scss
 
 ```
 cd novo-projeto
-ng serve --host 0.0.0.0 --disableHostCheck
+ng serve --host 0.0.0.0 --disable-host-check
 ```
 
 [open-gitpod-img]: https://gitpod.io/button/open-in-gitpod.svg
