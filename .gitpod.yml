@@ -7,11 +7,6 @@ ports:
 tasks:
   - before: export NG_CLI_ANALYTICS=ci
   - init: echo n | npm i -g @angular/cli
-  - command: >
-      cd project-one
-      npm i
-      sleep 6 &&
-      ng serve --host 0.0.0.0 --disableHostCheck
 # Github
 github:
   prebuilds:
