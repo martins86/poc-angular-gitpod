@@ -1,0 +1,24 @@
+# Portas e Ações
+ports:
+  - port: 4200
+    onOpen: open-preview
+
+# Tarefas na Inicialização
+tasks:
+  - before: export NG_CLI_ANALYTICS=ci
+  - command: >
+      echo n | npm i -g @angular/cli
+  - command: >
+      echo n | npm i @angular/cli
+      sleep 6 &&
+      ng serve --host 0.0.0.0 --disableHostCheck
+# Github
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: true
+    addBadge: false
