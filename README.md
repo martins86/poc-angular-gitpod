@@ -6,7 +6,6 @@
 <br>
 
 ## Gerando uma nova branch
----
 
 ```
 git checkout -b nova-branch
@@ -16,7 +15,6 @@ git checkout -b nova-branch
 <br>
 
 ## Gerando um novo projeto
----
 
 ```
 ng new novo-projeto --routing=true --strict=true --style=scss
@@ -26,7 +24,6 @@ ng new novo-projeto --routing=true --strict=true --style=scss
 <br>
 
 ## Subindo o novo projeto
----
 
 ```
 cd novo-projeto
