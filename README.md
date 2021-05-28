@@ -1,33 +1,42 @@
-## Poc Angular GitPod
+## Poc Template Angular GitPod
 
 [![Open in Gitpod][open-gitpod-img]][open-gitpod-url]
 
 <br>
 <br>
 
-## Gerando uma nova branch
+## Gerando um novo projeto web
 
 ```
-git checkout -b nova-branch
+ng new template-guide --routing=true --strict=true --style=scss
 ```
-
 <br>
 <br>
 
-## Gerando um novo projeto
+## Lista
 
 ```
-ng new novo-projeto --routing=true --strict=true --style=scss
-```
+ng g m features --routing
 
-<br>
-<br>
+ng g m features/people-page --routing
+ng g c features/people-page
+ng g class features/people-page/shared/models/data-person --type=model --skip-tests
+ng g s features/people-page/shared/services/person
 
-## Subindo o novo projeto
+ng g m features/product-page --routing
+ng g c features/product-page
+ng g class features/product-page/shared/models/data-product --type=model --skip-tests
+ng g s features/product-page/shared/services/product
 
-```
-cd novo-projeto
-ng serve --host 0.0.0.0 --disable-host-check
+ng g m features/login-page --routing
+ng g c features/login-page
+
+ng g m features/register-page --routing
+ng g c features/register-page
+
+ng g class core/models/data-user-session --type=model --skip-tests
+ng g s core/auth/auth
+
 ```
 
 [open-gitpod-img]: https://gitpod.io/button/open-in-gitpod.svg
