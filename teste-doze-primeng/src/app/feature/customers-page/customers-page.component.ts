@@ -26,8 +26,11 @@ export class CustomersPageComponent implements OnInit {
     ngOnInit() {
         this.customerService.getCustomers().then(customers => {
             this.customers = customers;
+            
+            this.setItemsSelectStatus(this.customers, this.statuses);
+            
             this.loading = false;
-
+            
             this.customers.forEach(customer => customer.date = new Date(customer.date ? customer.date : ''));
         });
 
@@ -43,14 +46,35 @@ export class CustomersPageComponent implements OnInit {
             { name: "Stephen Shaw", image: 'stephenshaw.png' },
             { name: "Xuxue Feng", image: 'xuxuefeng.png' }
         ];
+        
+    }
 
-        this.statuses = [
-            { label: 'Unqualified', value: 'unqualified' },
-            { label: 'Qualified', value: 'qualified' },
-            { label: 'New', value: 'new' },
-            { label: 'Negotiation', value: 'negotiation' },
-            { label: 'Renewal', value: 'renewal' },
-            { label: 'Proposal', value: 'proposal' }
-        ]
+    setItemsSelectStatus(dataList: CustomerModel[], selectlistItems: any[]): void {
+        for (let i = 0; i < dataList.length; i++) {
+            if (selectlistItems.length === 0) {
+                selectlistItems.push(
+                    {
+                        label: dataList[i].status,
+                        value: dataList[i].status
+                    });
+            } 
+            else {
+                if (this.isEqualValidate(selectlistItems, dataList[i].status)) {
+                    selectlistItems.push(
+                        {
+                            label: dataList[i].status,
+                            value: dataList[i].status
+                        }
+                    );
+                }
+            }
+        }
+    }
+    
+    isEqualValidate(items: any[], item: any): boolean {
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].label === item) { return false; }
+        }
+        return true;
     }
 }
