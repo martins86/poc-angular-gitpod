@@ -7,5 +7,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > ng new reactive-forms --routing=true --strict=true --style=scss
 > cd reactive-forms/
 > ng add @angular/material
-> ng g m features/reactive-forms --routing
-> ng g c features/reactive-forms
+> ng g m features/reactive-forms-page --routing
+> ng g c features/reactive-forms-page

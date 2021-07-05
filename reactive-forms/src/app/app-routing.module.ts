@@ -5,8 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./features/reactive-forms/reactive-forms.module').then(
-        (module) => module.ReactiveFormsModule
+      import('./features/reactive-forms-page/reactive-forms-page.module').then(
+        (module) => module.ReactiveFormsPageModule
       ),
   },
 ];
