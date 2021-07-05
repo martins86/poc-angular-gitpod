@@ -1,7 +1,7 @@
 # Portas e Ações
 ports:
   - port: 4200
-    onOpen: open-preview
+    onOpen: visibility
 
 # Tarefas na Inicialização
 tasks:
