@@ -1,7 +1,7 @@
 # Portas e Ações
 ports:
   - port: 4200
-    onOpen: visibility
+    onOpen: ignore
 
 # Tarefas na Inicialização
 tasks:
