@@ -1,34 +1,32 @@
-## Poc Angular GitPod
+## Poc Parse Data Api
 
-[![Open in Gitpod][open-gitpod-img]][open-gitpod-url]
-
-<br>
-<br>
-
-## Gerando uma nova branch
+### Subindo o novo projeto
 
 ```
-git checkout -b nova-branch
-```
-
-<br>
-<br>
-
-## Gerando um novo projeto
-
-```
-ng new novo-projeto --routing=true --strict=true --style=scss
-```
-
-<br>
-<br>
-
-## Subindo o novo projeto
-
-```
-cd novo-projeto
+cd parse-data-api
 ng serve --host 0.0.0.0 --disable-host-check
 ```
 
-[open-gitpod-img]: https://gitpod.io/button/open-in-gitpod.svg
-[open-gitpod-url]: https://www.gitpod.io/#https://github.com/martins86/poc-angular-gitpod
+<br>
+
+- Comandos <br />
+
+```
+ng g m feature/data-list --routing
+ng g c feature/data-list
+```
+```
+ng g interface feature/data-list/shrared/models/data-list --type=model
+```
+
+```
+ng g service feature/data-list/shrared/services/data-list
+```
+
+- Libs <br />
+
+- https://www.npmjs.com/package/stubby
+
+```
+npm i stubby
+```
