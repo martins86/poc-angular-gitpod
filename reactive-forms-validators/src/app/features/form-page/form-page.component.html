@@ -1,0 +1,14 @@
+<div class="container">
+    <mat-form-field appearance="fill">
+      <mat-label>Identificação</mat-label>
+      <input matInput placeholder="00000000" [formControl]="identification" maxlength="8" required>
+      <mat-error *ngIf="identification.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+    
+    <br/>
+    <br/>
+    
+    <p>O Campo é válido? : {{ (identification.invalid == true) ? 'Não' : 'Sim' }}</p>
+    
+    <p>Erros: {{ identification.errors | json }} </p>
+</div>
