@@ -17,7 +17,7 @@ git checkout -b nova-branch
 ## Gerando um novo projeto
 
 ```
-ng new novo-projeto --routing=true --strict=true --style=scss
+ng new reactive-forms-validators --routing=true --strict=true --style=scss
 ```
 
 <br>
