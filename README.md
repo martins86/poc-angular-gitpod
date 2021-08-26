@@ -59,16 +59,16 @@ ng serve --host 0.0.0.0 --disable-host-check
 
 ```
 ng g m features --routing
-ng g m features/upload --routing
-ng g c features/upload
+ng g m features/upload-page --routing
+ng g c features/upload-page
 
-ng g m features/upload/components/input-upload
-ng g c features/upload/components/input-upload
+ng g m features/upload-page/components/input-upload
+ng g c features/upload-page/components/input-upload
 
-ng g m features/upload/components/table
-ng g c features/upload/components/table
+ng g m features/upload-page/components/table
+ng g c features/upload-page/components/table
 
-ng g interface features/upload/models/csv-type-a --type=model
+ng g class features/upload-page/models/csv-type-a --type=model
 
 ng g m shared/layout/top-bar
 ng g c shared/layout/top-bar
