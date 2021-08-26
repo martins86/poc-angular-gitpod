@@ -1,1 +1,9 @@
-<p>input-upload works!</p>
+<label for="inputFileUpload">Selecione um CSV</label>
+<input
+  type="file"
+  #csvUploaded
+  name="Upload CSV"
+  id="inputFileUpload"
+  (change)="receivingCsv($event)"
+  accept=".csv"
+/>

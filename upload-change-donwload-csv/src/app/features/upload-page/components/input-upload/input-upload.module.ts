@@ -2,14 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputUploadComponent } from './input-upload.component';
 
-
-
 @NgModule({
-  declarations: [
-    InputUploadComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [InputUploadComponent],
+  imports: [CommonModule],
+  exports: [InputUploadComponent],
 })
-export class InputUploadModule { }
+export class InputUploadModule {}

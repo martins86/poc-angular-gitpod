@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CsvTypeA } from './models/csv-type-a.model';
 
 @Component({
   selector: 'app-upload-page',
   templateUrl: './upload-page.component.html',
-  styleUrls: ['./upload-page.component.scss']
+  styleUrls: ['./upload-page.component.scss'],
 })
-export class UploadPageComponent implements OnInit {
+export class UploadPageComponent {
+  csvUploaded: CsvTypeA[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  receivingNewFile(event: CsvTypeA[]): void {
+    this.csvUploaded.push(...event);
   }
-
 }
