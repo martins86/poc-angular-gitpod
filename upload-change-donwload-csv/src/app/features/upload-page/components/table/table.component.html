@@ -1,1 +1,62 @@
-<p>table works!</p>
+<mat-form-field appearance="standard">
+  <mat-label>Filtrar</mat-label>
+  <input
+    matInput
+    (keyup)="applyFilter($event)"
+    placeholder="Digite sua busca"
+    #input
+  />
+</mat-form-field>
+
+<div>
+  <table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="active">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Ativo</th>
+      <td mat-cell *matCellDef="let row">{{ row.active }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Tipo</th>
+      <td mat-cell *matCellDef="let row">{{ row.type }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nature">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Natureza</th>
+      <td mat-cell *matCellDef="let row">{{ row.nature }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+      <td mat-cell *matCellDef="let row">{{ row.status }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="qtyExecuted">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantidade</th>
+      <td mat-cell *matCellDef="let row">{{ row.qtyExecuted }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="averagePrice">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Preço unidade</th>
+      <td mat-cell *matCellDef="let row">{{ row.averagePrice | currency }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="createdIn">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Executada em</th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.createdIn | date: "dd/MM/yyyy" }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">Sem resultados para exibr.</td>
+    </tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[25, 50, 75, 100]"
+    aria-label="Selecione as páginas"
+  ></mat-paginator>
+</div>

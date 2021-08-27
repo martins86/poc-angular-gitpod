@@ -1,19 +1,39 @@
 <div class="container mt-5 pb-5">
-  <div class="row mb-5 p-4 bg-light border">
-    <div class="col-9">
-      <app-input-upload
-        (emitNewFile)="receivingNewFile($event)"
-      ></app-input-upload>
+  <div class="flex mb-5 p-4 bg-light border">
+    <div class="row">
+      <div class="col-9">
+        <app-input-upload
+          (emitNewFile)="receivingNewFile($event)"
+        ></app-input-upload>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <a
+          class="text-decoration-none"
+          download="exemple-a.csv"
+          target="_blank"
+          href="/assets/exemple-csv/exemple-a.csv"
+        >
+          Baixar csv de exemplo
+        </a>
+      </div>
     </div>
-    <div class="col d-flex justify-content-end">
-      <a
-        class="text-decoration-none"
-        download="exemple-a.csv"
-        target="_blank"
-        href="/assets/exemple-csv/exemple-a.csv"
-      >
-        Baixar csv de exemplo
-      </a>
+  </div>
+
+  <div *ngIf="csvUploaded.length !== 0">
+    <div class="flex p-4 bg-light border">
+      <div class="row">
+        <div class="col d-flex justify-content-end">
+          <button (click)="downloadCsvFile()">Exportar CSV</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-table
+            [csvUploaded]="csvUploaded"
+            [csvUploadedHeaders]="csvUploadedHeaders"
+          ></app-table>
+        </div>
+      </div>
     </div>
   </div>
 </div>

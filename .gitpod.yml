@@ -7,12 +7,12 @@ ports:
 tasks:
   - before: export NG_CLI_ANALYTICS=ci
   - init: echo n | npm i -g @angular/cli
-#   - command: >
-#       cd novo-projeto
-#       echo n | npm i @angular/cli &&
-#       npm install &&
-#       sleep 6 &&
-#       ng serve --host 0.0.0.0 --disableHostCheck
+  - command: >
+      cd novo-projeto
+      echo n | npm i @angular/cli &&
+      npm install &&
+      sleep 6 &&
+      ng serve --host 0.0.0.0 --disableHostCheck
 
 # Github
 github:
