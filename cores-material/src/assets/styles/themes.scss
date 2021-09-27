@@ -1,0 +1,21 @@
+@import "./guide-colors.scss";
+
+@import "@angular/material/theming";
+@include mat-core();
+
+// Cores do tema
+$cunstom-app-primary: mat-palette(
+  $mat-deep-orange
+); // Deep Orange 50 (500) => #ff5722
+$cunstom-app-secondary: mat-palette($mat-indigo, A200, A400, 700);
+$cunstom-app-warn: mat-palette($mat-red);
+
+// O Tema com as cores
+$custom-theme: mat-light-theme(
+  $cunstom-app-primary,
+  $cunstom-app-secondary,
+  $cunstom-app-warn
+);
+
+// Incluindo o tema custom
+@include angular-material-theme($custom-theme);

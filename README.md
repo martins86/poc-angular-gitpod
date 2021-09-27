@@ -30,5 +30,20 @@ cd novo-projeto
 ng serve --host 0.0.0.0 --disable-host-check
 ```
 
+## Referencias
+
+```
+ng add @angular/material
+
+ng g m shared/components/top-bar
+ng g c shared/components/top-bar
+
+https://material.angular.io/components/toolbar/overview
+https://material.io/
+
+https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+```
+
 [open-gitpod-img]: https://gitpod.io/button/open-in-gitpod.svg
 [open-gitpod-url]: https://www.gitpod.io/#https://github.com/martins86/poc-angular-gitpod
