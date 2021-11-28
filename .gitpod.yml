@@ -8,7 +8,7 @@ tasks:
   - before: export NG_CLI_ANALYTICS=ci
   - init: echo n | npm i -g @angular/cli
   - command: >
-      cd novo-projeto
+      cd upload-change-donwload-csv
       echo n | npm i @angular/cli &&
       npm install &&
       sleep 6 &&
