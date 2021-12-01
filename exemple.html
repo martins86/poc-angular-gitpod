@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo: Exemplo de uso do componente</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+      var btnPrimary = `.btn-primary {
+        background-color: #3f51b5;
+        border-radius: 5px;
+        border: 0;
+        padding: 0.65rem 3rem;
+        color: #FFF;
+        font-family: monospace;
+        font-size: large;
+        cursor: pointer;
+        box-shadow: 0px 3px 2px 0px #00000075;
+      }
+
+      .btn-primary:hover {
+        color: rgb(184, 180, 180);
+        box-shadow: 0px 2px 2px 0px #00000075;
+      }`;
+    </script>
+    <style type="text/css">
+      .card {
+        display: flex;
+        width: calc(100% - 48px);
+        padding: 24px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .block-items {
+        width: 94%;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item-width {
+        width: 43%;
+      }
+
+      .item-flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item-flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+
+      .text-box {
+        border: 1px solid #4e4e4e;
+        resize: none;
+        width: 90%;
+        height: 60px;
+        padding: 6px;
+        white-space: pre-line;
+        text-indent: -4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="card">
+      <h1>Botão Primário</h1>
+
+      <div class="block-items">
+        <div class="item-width item-flex-center">
+          <div style="padding: 12px">
+            <button type="button" class="btn-primary">Click me</button>
+          </div>
+        </div>
+
+        <div class="item-width item-flex-wrap">
+          <h3>HTML</h3>
+          <textarea class="text-box" readonly>
+            <button type="button" class="btn-primary">Click me</button>
+          </textarea>
+
+          <h3>CSS</h3>
+          <textarea class="text-box" id="css-btn-primary" readonly></textarea>
+
+          <h3>Library</h3>
+          <textarea class="text-box" readonly>
+            <lib-ui-button-primary></lib-ui-button-primary>
+          </textarea>
+        </div>
+      </div>
+    </div>
+    <script>
+      // -> adiciona o css na html da demo
+      var sheet = document.createElement('style')
+      sheet.innerHTML = btnPrimary;
+      document.body.appendChild(sheet);
+
+      // -> adiciona o
+      document.getElementById("css-btn-primary").value = btnPrimary;
+    </script>
+  </body>
+</html>
