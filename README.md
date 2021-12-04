@@ -1,34 +1,28 @@
-## Poc Angular GitPod
+## Poc Star Rating
 
 [![Open in Gitpod][open-gitpod-img]][open-gitpod-url]
 
 <br>
+<div align="center">
+    <img width="800" height="auto" src="https://github.com/martins86/poc-angular-gitpod/blob/star-rating/exemplo-demo.png?raw=true">
+</div>
 <br>
 
-## Gerando uma nova branch
+## Comandos
 
 ```
-git checkout -b nova-branch
+git checkout -b star-rating
+ng new demo-star-rating --routing=true --strict=true --style=scss
+cd demo-star-rating/
+ng add @angular/material
+ng g m shared/components
+ng g c shared/components/star-rating
 ```
 
-<br>
-<br>
+## Referências
 
-## Gerando um novo projeto
-
-```
-ng new novo-projeto --routing=true --strict=true --style=scss
-```
-
-<br>
-<br>
-
-## Subindo o novo projeto
-
-```
-cd novo-projeto
-ng serve --host 0.0.0.0 --disable-host-check
-```
+https://fonts.google.com/icons?selected=Material+Icons&icon.query=star
+https://material.angular.io/
 
 [open-gitpod-img]: https://gitpod.io/button/open-in-gitpod.svg
-[open-gitpod-url]: https://www.gitpod.io/#https://github.com/martins86/poc-angular-gitpod
+[open-gitpod-url]: https://www.gitpod.io/#https://github.com/martins86/poc-angular-gitpod/blob/star-rating
