@@ -8,11 +8,11 @@ tasks:
   - before: export NG_CLI_ANALYTICS=ci
   - init: echo n | npm i -g @angular/cli
   - command: >
-      cd demo-star-rating
+      cd demo-star-rating &&
       echo n | npm i @angular/cli &&
       npm install &&
       sleep 6 &&
-      ng serve --host 0.0.0.0 --disableHostCheck
+      ng serve --host 0.0.0.0 --disable-host-check
 
 # Github
 github:
